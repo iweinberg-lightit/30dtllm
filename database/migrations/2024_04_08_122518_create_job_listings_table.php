@@ -12,9 +12,9 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('job_listings', function (Blueprint $table) {
-            $table->  id();
+            $table->id();
+//            $table->unsignedBigInteger('employer_id'); Another way to link tables.
             $table->foreignIdFor(\App\Models\Employer::class);
- //            $table->unsignedBigInteger('employer_id'); Another way to link tables.
             $table->string('title');
             $table->string('salary');
             $table->timestamps();
