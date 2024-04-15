@@ -52,7 +52,7 @@ Route::get('/jobs/{id}/edit', function ($id) {
 });
 
 // Update
-Route::patch('/jobs/ {id}', function ($id) {
+Route::patch('/jobs/{id}', function ($id) {
     request()->validate([
         'title' => ['required', 'min:3'],
         'salary' => ['required']
